@@ -1,0 +1,39 @@
+{
+  "masterSheet" : [ {
+    "address" : "Akármi utca 14.",
+    "city" : "Budapest",
+    "country" : "Magyarország",
+    "date" : "2017-12-04T23:00:00.000Z",
+    "description" : "Ide jön egy hosszú leírás 1",
+    "link" : "facebook.com/events/12",
+    "name" : "Első verseny",
+    "weapon" : "longsword/sabre"
+  }, {
+    "address" : "Akármi utca 14.",
+    "city" : "Budapest",
+    "country" : "Magyarország",
+    "date" : "2017-12-09T23:00:00.000Z",
+    "description" : "Ide jön egy hosszú leírás 2",
+    "link" : "facebook.com/events/13",
+    "name" : "Második verseny",
+    "weapon" : "sabre"
+  }, {
+    "address" : "Akármi utca 14.",
+    "city" : "Budapest",
+    "country" : "Magyarország",
+    "date" : "2018-03-01T23:00:00.000Z",
+    "description" : "Ide jön egy hosszú leírás 3",
+    "link" : "facebook.com/events/14",
+    "name" : "Harmadik verseny",
+    "weapon" : "foil"
+  }, {
+    "address" : "Valami köz 4.",
+    "city" : "Tesztoszcity",
+    "country" : "Tesztián",
+    "date" : "2018-04-30T22:00:00.000Z",
+    "description" : "Ide is",
+    "link" : "facebook.com/events/15",
+    "name" : "Teszt verseny",
+    "weapon" : "swordandbuckler"
+  } ]
+}

@@ -1,0 +1,89 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-styles/color.html">
+<link rel="import" href="../bower_components/paper-styles/typography.html">
+
+<dom-module id="hema-calendar-label">
+    <template>
+        <style include="shared-styles">
+             :host {
+                display: block;
+                height: 100%;
+                width: 100px;
+                padding: 10px;
+                --foreground-color: white;
+                --background-color: #2D3E50;
+            }
+
+            #wrapper {
+                @apply --paper-font-common-base;
+                color: var(--foreground-color);
+                background-color: var(--background-color);
+            }
+
+            #month {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            #day {
+                font-size: 60px;
+                text-align: center;
+            }
+        </style>
+
+        <div id="wrapper">
+            <div id="day">
+                [[_day(date)]]
+            </div>
+        <div id="month">
+            [[_month(date)]]
+        </div>
+        </div>
+    </template>
+
+    <script>
+        class HemaCalendarLabel extends Polymer.Element {
+            static get is() {
+                return 'hema-calendar-label';
+            }
+
+            /**
+             * Object describing property-related metadata used by Polymer features
+             */
+            static get properties() {
+                return {
+                    date: String,
+                    locale: {
+                        type: String,
+                        value: "en-us"
+                    }
+                };
+            }
+
+            _month(date) {
+                let d = new Date(date);
+                return d.toLocaleString(this.locale, {
+                    month: "short"
+                });
+            }
+
+            _day(date) {
+                let d = new Date(date);
+                return d.getDate();
+            }
+
+        }
+
+        window.customElements.define(HemaCalendarLabel.is, HemaCalendarLabel);
+    </script>
+</dom-module>
